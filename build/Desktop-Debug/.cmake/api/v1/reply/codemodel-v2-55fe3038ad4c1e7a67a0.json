@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-173bf62c78bd207163cf.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "program_kasir",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "program_kasir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-program_kasir-Debug-fa4f428bd41e3a018919.json",
+					"name" : "program_kasir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "program_kasir_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-program_kasir_autogen-Debug-d9f50d070ca67ae343fd.json",
+					"name" : "program_kasir_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "program_kasir_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-program_kasir_autogen_timestamp_deps-Debug-74ec6252bd8d1369d978.json",
+					"name" : "program_kasir_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zienararya/Downloads/project/program_kasir/build/Desktop-Debug",
+		"source" : "/home/zienararya/Downloads/project/program_kasir"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

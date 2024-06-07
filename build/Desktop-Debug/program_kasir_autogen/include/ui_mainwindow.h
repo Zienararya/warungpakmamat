@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -34,30 +33,48 @@ public:
     QGroupBox *Menu;
     QWidget *verticalLayoutWidget_2;
     QVBoxLayout *Makanan;
-    QCheckBox *Pecel;
-    QCheckBox *NasiJagung;
-    QCheckBox *Rawon;
-    QCheckBox *NasiUduk;
+    QHBoxLayout *rawon;
+    QLabel *namarawon;
+    QLabel *jumlahrawon;
+    QSpinBox *addrawon;
+    QLineEdit *hargarawon;
+    QHBoxLayout *nasijagung;
+    QLabel *namamakanan;
+    QLabel *jumlahnasijagung;
+    QSpinBox *addjagung;
+    QLineEdit *harganasijagung;
+    QHBoxLayout *pecel;
+    QLabel *namapecel;
+    QLabel *jumlahpecel;
+    QSpinBox *addpecel;
+    QLineEdit *hargapecel;
+    QHBoxLayout *nasiuduk;
+    QLabel *namanasiuduk;
+    QLabel *jumlahnasiuduk;
+    QSpinBox *adduduk;
+    QLineEdit *harganasiuduk;
     QWidget *verticalLayoutWidget_3;
     QVBoxLayout *Minuman;
-    QCheckBox *EsTeh;
-    QCheckBox *EsJeruk;
-    QCheckBox *TehHangat;
-    QCheckBox *Kopi;
-    QWidget *layoutWidget_3;
-    QHBoxLayout *Total_makanan;
-    QLabel *labelHarga;
-    QLineEdit *lineEditHarga1;
-    QLabel *labelJumlah;
-    QSpinBox *spinBoxJumlah1;
-    QLabel *labelBungkus;
-    QWidget *layoutWidget_4;
-    QHBoxLayout *Total_Minuman;
-    QLabel *labelHarga_2;
-    QLineEdit *lineEditHarga1_2;
-    QLabel *labelJumlah_2;
-    QSpinBox *spinBoxJumlah1_2;
-    QLabel *labelBungkus_2;
+    QHBoxLayout *esteh;
+    QLabel *namaesteh;
+    QLabel *jumlahesteh;
+    QSpinBox *addesteh;
+    QLineEdit *hargaesteh;
+    QHBoxLayout *kopi;
+    QLabel *namakopi;
+    QLabel *jumlahkopi;
+    QSpinBox *addkopi;
+    QLineEdit *hargakopi;
+    QHBoxLayout *esjeruk;
+    QLabel *namaesjeruk;
+    QLabel *jumkahesjeruk;
+    QSpinBox *addjeruk;
+    QLineEdit *hargaesjeruk;
+    QHBoxLayout *tehhangat;
+    QLabel *namatehanget;
+    QLabel *jumlahtehanget;
+    QSpinBox *addtehanget;
+    QLineEdit *hargatehanget;
     QWidget *layoutWidget_2;
     QHBoxLayout *Option;
     QPushButton *btnHapus;
@@ -108,30 +125,109 @@ public:
         Menu->setFont(font2);
         verticalLayoutWidget_2 = new QWidget(Menu);
         verticalLayoutWidget_2->setObjectName("verticalLayoutWidget_2");
-        verticalLayoutWidget_2->setGeometry(QRect(0, 20, 471, 171));
+        verticalLayoutWidget_2->setGeometry(QRect(0, 20, 471, 277));
         Makanan = new QVBoxLayout(verticalLayoutWidget_2);
         Makanan->setObjectName("Makanan");
         Makanan->setContentsMargins(20, 0, 0, 0);
-        Pecel = new QCheckBox(verticalLayoutWidget_2);
-        Pecel->setObjectName("Pecel");
+        rawon = new QHBoxLayout();
+        rawon->setObjectName("rawon");
+        namarawon = new QLabel(verticalLayoutWidget_2);
+        namarawon->setObjectName("namarawon");
 
-        Makanan->addWidget(Pecel);
+        rawon->addWidget(namarawon);
 
-        NasiJagung = new QCheckBox(verticalLayoutWidget_2);
-        NasiJagung->setObjectName("NasiJagung");
-        NasiJagung->setChecked(false);
+        jumlahrawon = new QLabel(verticalLayoutWidget_2);
+        jumlahrawon->setObjectName("jumlahrawon");
 
-        Makanan->addWidget(NasiJagung);
+        rawon->addWidget(jumlahrawon);
 
-        Rawon = new QCheckBox(verticalLayoutWidget_2);
-        Rawon->setObjectName("Rawon");
+        addrawon = new QSpinBox(verticalLayoutWidget_2);
+        addrawon->setObjectName("addrawon");
 
-        Makanan->addWidget(Rawon);
+        rawon->addWidget(addrawon);
 
-        NasiUduk = new QCheckBox(verticalLayoutWidget_2);
-        NasiUduk->setObjectName("NasiUduk");
+        hargarawon = new QLineEdit(verticalLayoutWidget_2);
+        hargarawon->setObjectName("hargarawon");
 
-        Makanan->addWidget(NasiUduk);
+        rawon->addWidget(hargarawon);
+
+
+        Makanan->addLayout(rawon);
+
+        nasijagung = new QHBoxLayout();
+        nasijagung->setObjectName("nasijagung");
+        namamakanan = new QLabel(verticalLayoutWidget_2);
+        namamakanan->setObjectName("namamakanan");
+
+        nasijagung->addWidget(namamakanan);
+
+        jumlahnasijagung = new QLabel(verticalLayoutWidget_2);
+        jumlahnasijagung->setObjectName("jumlahnasijagung");
+
+        nasijagung->addWidget(jumlahnasijagung);
+
+        addjagung = new QSpinBox(verticalLayoutWidget_2);
+        addjagung->setObjectName("addjagung");
+
+        nasijagung->addWidget(addjagung);
+
+        harganasijagung = new QLineEdit(verticalLayoutWidget_2);
+        harganasijagung->setObjectName("harganasijagung");
+
+        nasijagung->addWidget(harganasijagung);
+
+
+        Makanan->addLayout(nasijagung);
+
+        pecel = new QHBoxLayout();
+        pecel->setObjectName("pecel");
+        namapecel = new QLabel(verticalLayoutWidget_2);
+        namapecel->setObjectName("namapecel");
+
+        pecel->addWidget(namapecel);
+
+        jumlahpecel = new QLabel(verticalLayoutWidget_2);
+        jumlahpecel->setObjectName("jumlahpecel");
+
+        pecel->addWidget(jumlahpecel);
+
+        addpecel = new QSpinBox(verticalLayoutWidget_2);
+        addpecel->setObjectName("addpecel");
+
+        pecel->addWidget(addpecel);
+
+        hargapecel = new QLineEdit(verticalLayoutWidget_2);
+        hargapecel->setObjectName("hargapecel");
+
+        pecel->addWidget(hargapecel);
+
+
+        Makanan->addLayout(pecel);
+
+        nasiuduk = new QHBoxLayout();
+        nasiuduk->setObjectName("nasiuduk");
+        namanasiuduk = new QLabel(verticalLayoutWidget_2);
+        namanasiuduk->setObjectName("namanasiuduk");
+
+        nasiuduk->addWidget(namanasiuduk);
+
+        jumlahnasiuduk = new QLabel(verticalLayoutWidget_2);
+        jumlahnasiuduk->setObjectName("jumlahnasiuduk");
+
+        nasiuduk->addWidget(jumlahnasiuduk);
+
+        adduduk = new QSpinBox(verticalLayoutWidget_2);
+        adduduk->setObjectName("adduduk");
+
+        nasiuduk->addWidget(adduduk);
+
+        harganasiuduk = new QLineEdit(verticalLayoutWidget_2);
+        harganasiuduk->setObjectName("harganasiuduk");
+
+        nasiuduk->addWidget(harganasiuduk);
+
+
+        Makanan->addLayout(nasiuduk);
 
         verticalLayoutWidget_3 = new QWidget(Menu);
         verticalLayoutWidget_3->setObjectName("verticalLayoutWidget_3");
@@ -139,87 +235,105 @@ public:
         Minuman = new QVBoxLayout(verticalLayoutWidget_3);
         Minuman->setObjectName("Minuman");
         Minuman->setContentsMargins(20, 0, 0, 0);
-        EsTeh = new QCheckBox(verticalLayoutWidget_3);
-        EsTeh->setObjectName("EsTeh");
+        esteh = new QHBoxLayout();
+        esteh->setObjectName("esteh");
+        namaesteh = new QLabel(verticalLayoutWidget_3);
+        namaesteh->setObjectName("namaesteh");
 
-        Minuman->addWidget(EsTeh);
+        esteh->addWidget(namaesteh);
 
-        EsJeruk = new QCheckBox(verticalLayoutWidget_3);
-        EsJeruk->setObjectName("EsJeruk");
+        jumlahesteh = new QLabel(verticalLayoutWidget_3);
+        jumlahesteh->setObjectName("jumlahesteh");
 
-        Minuman->addWidget(EsJeruk);
+        esteh->addWidget(jumlahesteh);
 
-        TehHangat = new QCheckBox(verticalLayoutWidget_3);
-        TehHangat->setObjectName("TehHangat");
+        addesteh = new QSpinBox(verticalLayoutWidget_3);
+        addesteh->setObjectName("addesteh");
 
-        Minuman->addWidget(TehHangat);
+        esteh->addWidget(addesteh);
 
-        Kopi = new QCheckBox(verticalLayoutWidget_3);
-        Kopi->setObjectName("Kopi");
+        hargaesteh = new QLineEdit(verticalLayoutWidget_3);
+        hargaesteh->setObjectName("hargaesteh");
 
-        Minuman->addWidget(Kopi);
+        esteh->addWidget(hargaesteh);
 
-        layoutWidget_3 = new QWidget(Menu);
-        layoutWidget_3->setObjectName("layoutWidget_3");
-        layoutWidget_3->setGeometry(QRect(10, 200, 431, 26));
-        Total_makanan = new QHBoxLayout(layoutWidget_3);
-        Total_makanan->setObjectName("Total_makanan");
-        Total_makanan->setContentsMargins(0, 0, 0, 0);
-        labelHarga = new QLabel(layoutWidget_3);
-        labelHarga->setObjectName("labelHarga");
 
-        Total_makanan->addWidget(labelHarga);
+        Minuman->addLayout(esteh);
 
-        lineEditHarga1 = new QLineEdit(layoutWidget_3);
-        lineEditHarga1->setObjectName("lineEditHarga1");
+        kopi = new QHBoxLayout();
+        kopi->setObjectName("kopi");
+        namakopi = new QLabel(verticalLayoutWidget_3);
+        namakopi->setObjectName("namakopi");
 
-        Total_makanan->addWidget(lineEditHarga1);
+        kopi->addWidget(namakopi);
 
-        labelJumlah = new QLabel(layoutWidget_3);
-        labelJumlah->setObjectName("labelJumlah");
+        jumlahkopi = new QLabel(verticalLayoutWidget_3);
+        jumlahkopi->setObjectName("jumlahkopi");
 
-        Total_makanan->addWidget(labelJumlah);
+        kopi->addWidget(jumlahkopi);
 
-        spinBoxJumlah1 = new QSpinBox(layoutWidget_3);
-        spinBoxJumlah1->setObjectName("spinBoxJumlah1");
+        addkopi = new QSpinBox(verticalLayoutWidget_3);
+        addkopi->setObjectName("addkopi");
 
-        Total_makanan->addWidget(spinBoxJumlah1);
+        kopi->addWidget(addkopi);
 
-        labelBungkus = new QLabel(layoutWidget_3);
-        labelBungkus->setObjectName("labelBungkus");
+        hargakopi = new QLineEdit(verticalLayoutWidget_3);
+        hargakopi->setObjectName("hargakopi");
 
-        Total_makanan->addWidget(labelBungkus);
+        kopi->addWidget(hargakopi);
 
-        layoutWidget_4 = new QWidget(Menu);
-        layoutWidget_4->setObjectName("layoutWidget_4");
-        layoutWidget_4->setGeometry(QRect(10, 240, 431, 26));
-        Total_Minuman = new QHBoxLayout(layoutWidget_4);
-        Total_Minuman->setObjectName("Total_Minuman");
-        Total_Minuman->setContentsMargins(0, 0, 0, 0);
-        labelHarga_2 = new QLabel(layoutWidget_4);
-        labelHarga_2->setObjectName("labelHarga_2");
 
-        Total_Minuman->addWidget(labelHarga_2);
+        Minuman->addLayout(kopi);
 
-        lineEditHarga1_2 = new QLineEdit(layoutWidget_4);
-        lineEditHarga1_2->setObjectName("lineEditHarga1_2");
+        esjeruk = new QHBoxLayout();
+        esjeruk->setObjectName("esjeruk");
+        namaesjeruk = new QLabel(verticalLayoutWidget_3);
+        namaesjeruk->setObjectName("namaesjeruk");
 
-        Total_Minuman->addWidget(lineEditHarga1_2);
+        esjeruk->addWidget(namaesjeruk);
 
-        labelJumlah_2 = new QLabel(layoutWidget_4);
-        labelJumlah_2->setObjectName("labelJumlah_2");
+        jumkahesjeruk = new QLabel(verticalLayoutWidget_3);
+        jumkahesjeruk->setObjectName("jumkahesjeruk");
 
-        Total_Minuman->addWidget(labelJumlah_2);
+        esjeruk->addWidget(jumkahesjeruk);
 
-        spinBoxJumlah1_2 = new QSpinBox(layoutWidget_4);
-        spinBoxJumlah1_2->setObjectName("spinBoxJumlah1_2");
+        addjeruk = new QSpinBox(verticalLayoutWidget_3);
+        addjeruk->setObjectName("addjeruk");
 
-        Total_Minuman->addWidget(spinBoxJumlah1_2);
+        esjeruk->addWidget(addjeruk);
 
-        labelBungkus_2 = new QLabel(layoutWidget_4);
-        labelBungkus_2->setObjectName("labelBungkus_2");
+        hargaesjeruk = new QLineEdit(verticalLayoutWidget_3);
+        hargaesjeruk->setObjectName("hargaesjeruk");
 
-        Total_Minuman->addWidget(labelBungkus_2);
+        esjeruk->addWidget(hargaesjeruk);
+
+
+        Minuman->addLayout(esjeruk);
+
+        tehhangat = new QHBoxLayout();
+        tehhangat->setObjectName("tehhangat");
+        namatehanget = new QLabel(verticalLayoutWidget_3);
+        namatehanget->setObjectName("namatehanget");
+
+        tehhangat->addWidget(namatehanget);
+
+        jumlahtehanget = new QLabel(verticalLayoutWidget_3);
+        jumlahtehanget->setObjectName("jumlahtehanget");
+
+        tehhangat->addWidget(jumlahtehanget);
+
+        addtehanget = new QSpinBox(verticalLayoutWidget_3);
+        addtehanget->setObjectName("addtehanget");
+
+        tehhangat->addWidget(addtehanget);
+
+        hargatehanget = new QLineEdit(verticalLayoutWidget_3);
+        hargatehanget->setObjectName("hargatehanget");
+
+        tehhangat->addWidget(hargatehanget);
+
+
+        Minuman->addLayout(tehhangat);
 
         layoutWidget_2 = new QWidget(centralwidget);
         layoutWidget_2->setObjectName("layoutWidget_2");
@@ -265,20 +379,22 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         Title->setText(QCoreApplication::translate("MainWindow", "Warung Pak Mamat", nullptr));
         Menu->setTitle(QCoreApplication::translate("MainWindow", "Menu", nullptr));
-        Pecel->setText(QCoreApplication::translate("MainWindow", "Pecel", nullptr));
-        NasiJagung->setText(QCoreApplication::translate("MainWindow", "Nasi Jagung", nullptr));
-        Rawon->setText(QCoreApplication::translate("MainWindow", "Rawon", nullptr));
-        NasiUduk->setText(QCoreApplication::translate("MainWindow", "Nasi Uduk", nullptr));
-        EsTeh->setText(QCoreApplication::translate("MainWindow", "Es Teh", nullptr));
-        EsJeruk->setText(QCoreApplication::translate("MainWindow", "Es Jeruk", nullptr));
-        TehHangat->setText(QCoreApplication::translate("MainWindow", "Teh Hangat", nullptr));
-        Kopi->setText(QCoreApplication::translate("MainWindow", "Kopi Hitam", nullptr));
-        labelHarga->setText(QCoreApplication::translate("MainWindow", "Harga Makanan:", nullptr));
-        labelJumlah->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
-        labelBungkus->setText(QCoreApplication::translate("MainWindow", "Bungkus", nullptr));
-        labelHarga_2->setText(QCoreApplication::translate("MainWindow", "Harga Minuman:", nullptr));
-        labelJumlah_2->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
-        labelBungkus_2->setText(QCoreApplication::translate("MainWindow", "Bungkus", nullptr));
+        namarawon->setText(QCoreApplication::translate("MainWindow", "Rawon", nullptr));
+        jumlahrawon->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namamakanan->setText(QCoreApplication::translate("MainWindow", "Nasi Jagung ", nullptr));
+        jumlahnasijagung->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namapecel->setText(QCoreApplication::translate("MainWindow", "Pecel ", nullptr));
+        jumlahpecel->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namanasiuduk->setText(QCoreApplication::translate("MainWindow", "Nasi Uduk", nullptr));
+        jumlahnasiuduk->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namaesteh->setText(QCoreApplication::translate("MainWindow", "Es Teh", nullptr));
+        jumlahesteh->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namakopi->setText(QCoreApplication::translate("MainWindow", "Kopi", nullptr));
+        jumlahkopi->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namaesjeruk->setText(QCoreApplication::translate("MainWindow", "Es Jeruk", nullptr));
+        jumkahesjeruk->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
+        namatehanget->setText(QCoreApplication::translate("MainWindow", "Teh hangat", nullptr));
+        jumlahtehanget->setText(QCoreApplication::translate("MainWindow", "x", nullptr));
         btnHapus->setText(QCoreApplication::translate("MainWindow", "Hapus", nullptr));
         btnJalankan->setText(QCoreApplication::translate("MainWindow", "Jalankan", nullptr));
         labelTotal->setText(QCoreApplication::translate("MainWindow", "Total:", nullptr));

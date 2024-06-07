@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QCheckBox>
 #include <QLineEdit>
 #include <QSpinBox>
 
@@ -24,9 +23,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    void setHargaMakanan();
-    void setHargaMinuman();
-    void updateHarga(QCheckBox *checkbox, QLineEdit *lineEdit, int harga);
+    void updateHarga(QSpinBox *spinBox, QLineEdit *lineEdit, int harga);
     int getTotalMakanan();
     int getTotalMinuman();
 };

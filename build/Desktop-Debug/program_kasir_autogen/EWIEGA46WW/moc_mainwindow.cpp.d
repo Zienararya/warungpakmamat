@@ -150,13 +150,10 @@
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtGui/qtransform.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtGui/qvalidator.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtGui/qwindowdefs.h \
-  /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/QCheckBox \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/QLineEdit \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/QMainWindow \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/QSpinBox \
-  /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qabstractbutton.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
-  /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qcheckbox.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qframe.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qlineedit.h \
   /home/zienararya/Qt/6.7.1/gcc_64/include/QtWidgets/qmainwindow.h \

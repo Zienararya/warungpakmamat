@@ -8,8 +8,14 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
 
     // Set initial prices to 0
-    ui->lineEditHarga1->setText(QString::number(0));
-    ui->lineEditHarga1_2->setText(QString::number(0));
+    ui->harganasijagung->setText(QString::number(7000));
+    ui->hargapecel->setText(QString::number(7000));
+    ui->hargarawon->setText(QString::number(12000));
+    ui->harganasiuduk->setText(QString::number(10000));
+    ui->hargaesteh->setText(QString::number(2000));
+    ui->hargakopi->setText(QString::number(5000));
+    ui->hargaesjeruk->setText(QString::number(3000));
+    ui->hargatehanget->setText(QString::number(2000));
 }
 
 MainWindow::~MainWindow()
@@ -17,13 +23,10 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::updateHarga(QCheckBox *checkbox, QLineEdit *lineEdit, int harga)
+void MainWindow::updateHarga(QSpinBox *spinBox, QLineEdit *lineEdit, int harga)
 {
-    if (checkbox->isChecked()) {
-        lineEdit->setText(QString::number(harga));
-    } else {
-        lineEdit->setText(QString::number(0));
-    }
+    int jumlah = spinBox->value();
+    lineEdit->setText(QString::number(harga * jumlah));
 }
 
 void MainWindow::on_btnJalankan_clicked()
@@ -37,50 +40,37 @@ void MainWindow::on_btnJalankan_clicked()
 
 void MainWindow::on_btnHapus_clicked()
 {
-    QList<QCheckBox *> allCheckBoxes = this->findChildren<QCheckBox *>();
-    foreach (QCheckBox *checkBox, allCheckBoxes) {
-        checkBox->setChecked(false);
-    }
-
-    ui->spinBoxJumlah1->setValue(0);
-    ui->spinBoxJumlah1_2->setValue(0);
+    ui->addpecel->setValue(0);
+    ui->addjagung->setValue(0);
+    ui->adduduk->setValue(0);
+    ui->addrawon->setValue(0);
+    ui->addesteh->setValue(0);
+    ui->addkopi->setValue(0);
+    ui->addjeruk->setValue(0);
+    ui->addtehanget->setValue(0);
 
     ui->lineEditTotal->clear();
-    ui->lineEditHarga1->setText(QString::number(0));
-    ui->lineEditHarga1_2->setText(QString::number(0));
 }
 
 int MainWindow::getTotalMakanan()
 {
     int total = 0;
 
-    if (ui->Pecel->isChecked()) {
-        int harga = 7000;  // Harga Pecel
-        updateHarga(ui->Pecel, ui->lineEditHarga1, harga);
-        int jumlah = ui->spinBoxJumlah1->value();
-        total += harga * jumlah;
-    }
+    int hargaPecel = 7000;
+    updateHarga(ui->addpecel, ui->hargapecel, hargaPecel);
+    total += hargaPecel * ui->addpecel->value();
 
-    if (ui->NasiJagung->isChecked()) {
-        int harga = 7000;  // Harga Nasi Jagung
-        updateHarga(ui->NasiJagung, ui->lineEditHarga1, harga);
-        int jumlah = ui->spinBoxJumlah1->value();
-        total += harga * jumlah;
-    }
+    int hargaNasiJagung = 7000;
+    updateHarga(ui->addjagung, ui->harganasijagung, hargaNasiJagung);
+    total += hargaNasiJagung * ui->addjagung->value();
 
-    if (ui->Rawon->isChecked()) {
-        int harga = 12000;  // Harga Rawon
-        updateHarga(ui->Rawon, ui->lineEditHarga1, harga);
-        int jumlah = ui->spinBoxJumlah1->value();
-        total += harga * jumlah;
-    }
+    int hargaRawon = 12000;
+    updateHarga(ui->addrawon, ui->hargarawon, hargaRawon);
+    total += hargaRawon * ui->addrawon->value();
 
-    if (ui->NasiUduk->isChecked()) {
-        int harga = 10000;  // Harga Nasi Uduk
-        updateHarga(ui->NasiUduk, ui->lineEditHarga1, harga);
-        int jumlah = ui->spinBoxJumlah1->value();
-        total += harga * jumlah;
-    }
+    int hargaNasiUduk = 10000;
+    updateHarga(ui->adduduk, ui->harganasiuduk, hargaNasiUduk);
+    total += hargaNasiUduk * ui->adduduk->value();
 
     return total;
 }
@@ -89,33 +79,21 @@ int MainWindow::getTotalMinuman()
 {
     int total = 0;
 
-    if (ui->EsTeh->isChecked()) {
-        int harga = 2000;  // Harga Es Teh
-        updateHarga(ui->EsTeh, ui->lineEditHarga1_2, harga);
-        int jumlah = ui->spinBoxJumlah1_2->value();
-        total += harga * jumlah;
-    }
+    int hargaEsTeh = 2000;
+    updateHarga(ui->addesteh, ui->hargaesteh, hargaEsTeh);
+    total += hargaEsTeh * ui->addesteh->value();
 
-    if (ui->EsJeruk->isChecked()) {
-        int harga = 3000;  // Harga Es Jeruk
-        updateHarga(ui->EsJeruk, ui->lineEditHarga1_2, harga);
-        int jumlah = ui->spinBoxJumlah1_2->value();
-        total += harga * jumlah;
-    }
+    int hargaKopi = 5000;
+    updateHarga(ui->addkopi, ui->hargakopi, hargaKopi);
+    total += hargaKopi * ui->addkopi->value();
 
-    if (ui->TehHangat->isChecked()) {
-        int harga = 2000;  // Harga Teh Hangat
-        updateHarga(ui->TehHangat, ui->lineEditHarga1_2, harga);
-        int jumlah = ui->spinBoxJumlah1_2->value();
-        total += harga * jumlah;
-    }
+    int hargaEsJeruk = 3000;
+    updateHarga(ui->addjeruk, ui->hargaesjeruk, hargaEsJeruk);
+    total += hargaEsJeruk * ui->addjeruk->value();
 
-    if (ui->Kopi->isChecked()) {
-        int harga = 4000;  // Harga Kopi Hitam
-        updateHarga(ui->Kopi, ui->lineEditHarga1_2, harga);
-        int jumlah = ui->spinBoxJumlah1_2->value();
-        total += harga * jumlah;
-    }
+    int hargaTehHangat = 2000;
+    updateHarga(ui->addtehanget, ui->hargatehanget, hargaTehHangat);
+    total += hargaTehHangat * ui->addtehanget->value();
 
     return total;
 }

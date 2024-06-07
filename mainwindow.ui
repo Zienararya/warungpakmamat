@@ -87,7 +87,7 @@
        <x>0</x>
        <y>20</y>
        <width>471</width>
-       <height>171</height>
+       <height>277</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="Makanan">
@@ -95,35 +95,100 @@
        <number>20</number>
       </property>
       <item>
-       <widget class="QCheckBox" name="Pecel">
-        <property name="text">
-         <string>Pecel</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="rawon">
+        <item>
+         <widget class="QLabel" name="namarawon">
+          <property name="text">
+           <string>Rawon</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahrawon">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addrawon"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargarawon"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="NasiJagung">
-        <property name="text">
-         <string>Nasi Jagung</string>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="nasijagung">
+        <item>
+         <widget class="QLabel" name="namamakanan">
+          <property name="text">
+           <string>Nasi Jagung </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahnasijagung">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addjagung"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="harganasijagung"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="Rawon">
-        <property name="text">
-         <string>Rawon</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="pecel">
+        <item>
+         <widget class="QLabel" name="namapecel">
+          <property name="text">
+           <string>Pecel </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahpecel">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addpecel"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargapecel"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="NasiUduk">
-        <property name="text">
-         <string>Nasi Uduk</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="nasiuduk">
+        <item>
+         <widget class="QLabel" name="namanasiuduk">
+          <property name="text">
+           <string>Nasi Uduk</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahnasiuduk">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="adduduk"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="harganasiuduk"/>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -141,110 +206,100 @@
        <number>20</number>
       </property>
       <item>
-       <widget class="QCheckBox" name="EsTeh">
-        <property name="text">
-         <string>Es Teh</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="esteh">
+        <item>
+         <widget class="QLabel" name="namaesteh">
+          <property name="text">
+           <string>Es Teh</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahesteh">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addesteh"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargaesteh"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="EsJeruk">
-        <property name="text">
-         <string>Es Jeruk</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="kopi">
+        <item>
+         <widget class="QLabel" name="namakopi">
+          <property name="text">
+           <string>Kopi</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahkopi">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addkopi"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargakopi"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="TehHangat">
-        <property name="text">
-         <string>Teh Hangat</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="esjeruk">
+        <item>
+         <widget class="QLabel" name="namaesjeruk">
+          <property name="text">
+           <string>Es Jeruk</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumkahesjeruk">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addjeruk"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargaesjeruk"/>
+        </item>
+       </layout>
       </item>
       <item>
-       <widget class="QCheckBox" name="Kopi">
-        <property name="text">
-         <string>Kopi Hitam</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>200</y>
-       <width>431</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="Total_makanan">
-      <item>
-       <widget class="QLabel" name="labelHarga">
-        <property name="text">
-         <string>Harga Makanan:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEditHarga1"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelJumlah">
-        <property name="text">
-         <string>x</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="spinBoxJumlah1"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelBungkus">
-        <property name="text">
-         <string>Bungkus</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="layoutWidget_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>240</y>
-       <width>431</width>
-       <height>26</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="Total_Minuman">
-      <item>
-       <widget class="QLabel" name="labelHarga_2">
-        <property name="text">
-         <string>Harga Minuman:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="lineEditHarga1_2"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelJumlah_2">
-        <property name="text">
-         <string>x</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSpinBox" name="spinBoxJumlah1_2"/>
-      </item>
-      <item>
-       <widget class="QLabel" name="labelBungkus_2">
-        <property name="text">
-         <string>Bungkus</string>
-        </property>
-       </widget>
+       <layout class="QHBoxLayout" name="tehhangat">
+        <item>
+         <widget class="QLabel" name="namatehanget">
+          <property name="text">
+           <string>Teh hangat</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="jumlahtehanget">
+          <property name="text">
+           <string>x</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="addtehanget"/>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="hargatehanget"/>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
